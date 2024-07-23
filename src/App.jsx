@@ -1,33 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import styled from 'styled-components'
 import './App.css'
+import GlobalStyle from './styles/GlobalStyles'
+
+const H1=styled.h1`
+  font-size:30px;
+  font-weight:600;
+  background-color: black;
+  color:gold;
+`
+
+const Button=styled.button`
+  font-size:1.4rem;
+  padding:1.2rem 1.6rem;
+  margin: 20px;
+  font-weight: 500;
+  border:none;
+  border-radius:var(--border-radius-sm);
+  background-color: var(--color-brand-600);
+  cursor: pointer;
+  box-shadow:var(--shadow-sm);
+  color:var(--color-brand-50);
+`
+
+const Input=styled.input`
+  border:1px solid var(--color-grey-300);
+  background-color: var(--color-grey-700);
+  border-radius:var(--border-radius-lg);
+  padding:0.8rem 1.2rem;
+  box-shadow:var(--shadow-lg)
+`
+
+const StyledApp=styled.div`
+  background-color: azure;
+  padding:20px;
+`
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <GlobalStyle/>
+    <StyledApp>
+      <H1>Wild Oasis</H1>
+      <Input type='text' placeholder='Write something...'/>
+      <Button onClick={()=>alert('Wankenstein!')}>Check In </Button>
+      <Button onClick={()=>alert('Check out!')}>Check Out</Button>
+    </StyledApp>
     </>
   )
 }
