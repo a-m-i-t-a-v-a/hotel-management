@@ -66,7 +66,7 @@ function MainNav(){
           </LinkStyle> 
         </li>
         <li>
-          <LinkStyle to='/cabin'>
+          <LinkStyle to='/cabins'>
             <HiOutlineHomeModern/>
             <span>
               Cabin
