@@ -1,15 +1,8 @@
-import { useEffect } from "react";
-//import CabinTable from "../features/cabins/CabinTable";
 import Heading from "../ui/Heading";
 import Row from "../ui/Row";
-//import getCabins from "../services/apiCabins";
+import CabinTable from "../features/cabins/CabinTable";
 
 function Cabins() {
-
-  //useEffect(()=>{
-    //getCabins().then(data=>console.log(data))
-  //},[])
-
   return (
     <>
     <Row type="horizontal">
@@ -17,8 +10,7 @@ function Cabins() {
       <p>TEST</p>
     </Row>
     <Row>
-       Hey
-       {/**<CabinTable/>*/}
+       <CabinTable/>
     </Row>
     </>
   );
